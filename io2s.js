@@ -27,7 +27,7 @@ function io2s(segmentArray, mcXmlPath, title){
     console.log("the multiclips referenced are " + JSON.stringify(theMulticlips, null, 4));
 
     var mcArray = [];
-    theMulticlips.forEach(mc =>{
+    theMulticlips.forEach(mc => {
       console.log("working on " + mc);
       for (var i = 0; i < data.fcpxml.resources[0].media.length; i++) {
         console.log("getting this from data.fcpxml.resources . . . " + data.fcpxml.resources[0].media[i]._attr.name);
@@ -50,6 +50,7 @@ function io2s(segmentArray, mcXmlPath, title){
           for (var i = 0; i < mcArray.length; i++) {
             if (mcArray[i].name == thisFile) {
               var theR = mcArray[i].rNumber;
+              console.log(`here is theR: ${theR}`);
               break;
             }
           }
